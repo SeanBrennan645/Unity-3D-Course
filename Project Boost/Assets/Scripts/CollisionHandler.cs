@@ -9,6 +9,8 @@ public class CollisionHandler : MonoBehaviour
 
     AudioSource audioSource;
 
+    bool isTransitioning = false;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -46,6 +48,7 @@ public class CollisionHandler : MonoBehaviour
     void ReloadLevel()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        isTransitioning = false;
         SceneManager.LoadScene(currentSceneIndex);
     }
 
@@ -57,13 +60,19 @@ public class CollisionHandler : MonoBehaviour
         {
             nextSceneIndex = 0;
         }
+        isTransitioning = false;
         SceneManager.LoadScene(nextSceneIndex);
     }
 
     void StartCrashSequence()
     {
         // add death effects
-        audioSource.PlayOneShot(deathAudio);
+        if (!isTransitioning)
+        {
+            audioSource.Stop();
+            audioSource.PlayOneShot(deathAudio);
+            isTransitioning = true;
+        }
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", LoadDelay);
     }
@@ -71,7 +80,12 @@ public class CollisionHandler : MonoBehaviour
     void StartWinSequence()
     {
         // add sfx to win
-        audioSource.PlayOneShot(winAudio);
+        if (!isTransitioning)
+        {
+            audioSource.Stop();
+            audioSource.PlayOneShot(winAudio);
+            isTransitioning = true;
+        }
         GetComponent<Movement>().enabled = false;
         Invoke("LoadNextLevel", LoadDelay);
     }
