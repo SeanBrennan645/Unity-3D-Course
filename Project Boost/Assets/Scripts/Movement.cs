@@ -8,6 +8,10 @@ public class Movement : MonoBehaviour
     [SerializeField] float rotationThrust = 1.0f;
     [SerializeField] AudioClip mainEngine;
 
+    [SerializeField] ParticleSystem LeftBooster;
+    [SerializeField] ParticleSystem RightBooster;
+    [SerializeField] ParticleSystem MainBooster;
+
     Rigidbody rigidb;
     AudioSource audioSource;
 
@@ -29,15 +33,11 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            rigidb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
-            if (!audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(mainEngine);
-            }
+            StartThrusting();
         }
         else
         {
-            audioSource.Stop();
+            StopThrusting();
         }
     }
 
@@ -45,11 +45,54 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            ApplyRotation(rotationThrust);
+            RotateLeft();
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            ApplyRotation(-rotationThrust);
+            RotateRight();
+        }
+        else
+        {
+            StopRotating();
+        }
+    }
+
+    private void StartThrusting()
+    {
+        rigidb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(mainEngine);
+            MainBooster.Play();
+        }
+    }
+    private void StopThrusting()
+    {
+        audioSource.Stop();
+        MainBooster.Stop();
+    } 
+
+    private void StopRotating()
+    {
+        RightBooster.Stop();
+        LeftBooster.Stop();
+    }
+
+    private void RotateRight()
+    {
+        ApplyRotation(-rotationThrust);
+        if (!LeftBooster.isPlaying)
+        {
+            LeftBooster.Play();
+        }
+    }
+
+    private void RotateLeft()
+    {
+        ApplyRotation(rotationThrust);
+        if (!RightBooster.isPlaying)
+        {
+            RightBooster.Play();
         }
     }
 
