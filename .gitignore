@@ -4,6 +4,7 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Argon Assault/Assets/Samples*
 
 # Visual Studio cache directory
 .vs/
