@@ -10,6 +10,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 5f;
 
+    [SerializeField] float positionPitchFactor = -2.0f;
+    [SerializeField] float controlPitchFactor  = -15.0f;
+
+    [SerializeField] float positionYawFactor = 2.0f;
+
+    [SerializeField] float controlRollFactor = -20.0f;
+
+    float yThrow;
+    float xThrow;
+
     void Start()
     {
         
@@ -28,12 +38,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         UpdatePosition();
+        UpdateRotation();
     }
 
     private void UpdatePosition()
     {
-        float xThrow = movement.ReadValue<Vector2>().x;
-        float yThrow = movement.ReadValue<Vector2>().y;
+        xThrow = movement.ReadValue<Vector2>().x;
+        yThrow = movement.ReadValue<Vector2>().y;
         //float horizontalThrow = Input.GetAxis("Horizontal"); old system
         //float vertialThrow = Input.GetAxis("Vertical"); old system
 
@@ -49,5 +60,20 @@ public class PlayerMovement : MonoBehaviour
             clampedXPos,
             clampedYPos,
             transform.localPosition.z);
+    }
+
+    private void UpdateRotation()
+    {
+        float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
+        float pitchDueToControlThrow = yThrow * controlPitchFactor;
+
+        float yawDueToPosition = transform.localPosition.x * positionYawFactor;
+
+        float rollDueToControlThrow = xThrow * controlRollFactor;
+
+        float pitch = pitchDueToPosition + pitchDueToControlThrow;
+        float yaw = yawDueToPosition;
+        float roll = rollDueToControlThrow;
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 }
