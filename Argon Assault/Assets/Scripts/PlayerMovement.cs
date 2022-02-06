@@ -7,7 +7,9 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] InputAction movement;
     [SerializeField] float controlSpeed = 30.0f;
-    // Start is called before the first frame update
+    [SerializeField] float xRange = 5f;
+    [SerializeField] float yRange = 5f;
+
     void Start()
     {
         
@@ -25,6 +27,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdatePosition();
+    }
+
+    private void UpdatePosition()
+    {
         float xThrow = movement.ReadValue<Vector2>().x;
         float yThrow = movement.ReadValue<Vector2>().y;
         //float horizontalThrow = Input.GetAxis("Horizontal"); old system
@@ -32,12 +39,15 @@ public class PlayerMovement : MonoBehaviour
 
         float xOffset = xThrow * Time.deltaTime * controlSpeed;
         float yOffset = yThrow * Time.deltaTime * controlSpeed;
-        float newXPos = transform.localPosition.x + xOffset;
-        float newYPos = transform.localPosition.y + yOffset;
+        float rawXPos = transform.localPosition.x + xOffset;
+        float rawYPos = transform.localPosition.y + yOffset;
+
+        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
+        float clampedYPos = Mathf.Clamp(rawYPos, -yRange, 2 * yRange);
 
         transform.localPosition = new Vector3(
-            newXPos,
-            newYPos,
+            clampedXPos,
+            clampedYPos,
             transform.localPosition.z);
     }
 }
