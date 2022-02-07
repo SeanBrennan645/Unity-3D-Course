@@ -470,6 +470,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8104809944540909933, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
+      propertyPath: field of view
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 8104809946197591712, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
       propertyPath: m_Name
       value: Player Rig
