@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] InputAction movement;
+    [SerializeField] InputAction mouseClick;
+
     [SerializeField] float controlSpeed = 30.0f;
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 5f;
@@ -28,17 +30,20 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         movement.Enable();
+        mouseClick.Enable();
     }
 
     private void OnDisable()
     {
         movement.Disable();
+        mouseClick.Disable();
     }
     // Update is called once per frame
     void Update()
     {
         UpdatePosition();
         UpdateRotation();
+        ProcessFiring();
     }
 
     private void UpdatePosition()
@@ -78,5 +83,13 @@ public class PlayerMovement : MonoBehaviour
         float yaw = yawDueToPosition;
         float roll = rollDueToControlThrow;
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    private void ProcessFiring()
+    {
+        if (mouseClick.triggered)
+        {
+            Debug.Log("Mouse Pressed!!!");
+        }
     }
 }
