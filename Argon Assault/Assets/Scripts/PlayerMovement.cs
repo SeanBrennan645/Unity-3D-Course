@@ -10,10 +10,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 5f;
 
-    [SerializeField] float positionPitchFactor = -2.0f;
-    [SerializeField] float controlPitchFactor  = -15.0f;
+    [SerializeField] float positionPitchFactor = -5.0f;
+    [SerializeField] float controlPitchFactor  = -20.0f;
 
-    [SerializeField] float positionYawFactor = 2.0f;
+    [SerializeField] float positionYawFactor = 5.0f;
 
     [SerializeField] float controlRollFactor = -20.0f;
 
@@ -45,6 +45,9 @@ public class PlayerMovement : MonoBehaviour
     {
         xThrow = movement.ReadValue<Vector2>().x;
         yThrow = movement.ReadValue<Vector2>().y;
+
+        //TODO: as I'm using new input system will need to interpolate the vectors for smooth keyboard movement
+
         //float horizontalThrow = Input.GetAxis("Horizontal"); old system
         //float vertialThrow = Input.GetAxis("Vertical"); old system
 
