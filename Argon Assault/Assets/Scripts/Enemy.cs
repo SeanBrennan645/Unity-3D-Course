@@ -7,18 +7,19 @@ public class Enemy : MonoBehaviour
     [Header("VFX")]
     [SerializeField] GameObject deathVfx;
     [SerializeField] GameObject hitVfx;
-    [SerializeField] Transform parent;
     [Header("Point System")]
     [SerializeField] int scoreValue = 10;
     [SerializeField] int killValue = 50;
     [SerializeField] int hitPoints = 3;
 
     private Scoreboard scoreboard;
+    private Transform parent;
 
     private void Start()
     {
         scoreboard = FindObjectOfType<Scoreboard>();
         AddRigidbody();
+        parent = GameObject.FindWithTag("SpawnAtRuntime").transform;
     }
 
     private void AddRigidbody()
