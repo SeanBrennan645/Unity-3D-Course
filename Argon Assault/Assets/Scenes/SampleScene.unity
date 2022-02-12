@@ -175,6 +175,11 @@ PlayableDirector:
     value: {fileID: 680180128}
   m_ExposedReferences:
     m_References: []
+--- !u!1 &619866838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4896793392746302867, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
+  m_PrefabInstance: {fileID: 8104809944953601054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &680180127
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +387,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1244778428 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3534492737739929092, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
+  m_PrefabInstance: {fileID: 8104809944953601054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1512716992 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8104809946197591774, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
@@ -470,9 +480,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 922758023324171081, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3534492737739929092, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896793392746302867, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8104809946157841565, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
       propertyPath: mouseClick.m_SingletonActionBindings.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104809946157841565, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8104809946157841565, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
       propertyPath: mouseClick.m_Id
@@ -494,6 +520,22 @@ PrefabInstance:
       propertyPath: mouseClick.m_SingletonActionBindings.Array.data[0].m_Path
       value: <Mouse>/leftButton
       objectReference: {fileID: 0}
+    - target: {fileID: 8104809946157841565, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
+      propertyPath: lasers.Array.data[2]
+      value: 
+      objectReference: {fileID: 619866838}
+    - target: {fileID: 8104809946157841565, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
+      propertyPath: lasers.Array.data[3]
+      value: 
+      objectReference: {fileID: 1244778428}
+    - target: {fileID: 8104809946157841565, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 1244778428}
+    - target: {fileID: 8104809946157841565, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 619866838}
     - target: {fileID: 8104809946197591712, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
       propertyPath: m_Name
       value: Player Rig
@@ -541,6 +583,10 @@ PrefabInstance:
     - target: {fileID: 8104809946197591713, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.01802152
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094920795948368094, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9656ecf60cbe4ee49ba2450adf69ba8f, type: 3}

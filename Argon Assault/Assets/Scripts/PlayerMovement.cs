@@ -1,22 +1,27 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Input Bindings")]
     [SerializeField] InputAction movement;
     [SerializeField] InputAction mouseClick;
 
-    [SerializeField] float controlSpeed = 30.0f;
+    [Header("General Setup Settings")]
+    [Tooltip("Speed of Ship")][SerializeField] float controlSpeed = 30.0f;
     [SerializeField] float xRange = 5f;
     [SerializeField] float yRange = 5f;
 
+    [Header("Laser Array")]
+    [SerializeField] GameObject[] lasers;
+
+    [Header("Rotation Settings")]
     [SerializeField] float positionPitchFactor = -5.0f;
     [SerializeField] float controlPitchFactor  = -20.0f;
-
     [SerializeField] float positionYawFactor = 5.0f;
-
     [SerializeField] float controlRollFactor = -20.0f;
 
     float yThrow;
@@ -87,9 +92,22 @@ public class PlayerMovement : MonoBehaviour
 
     private void ProcessFiring()
     {
-        if (mouseClick.triggered)
+        if (mouseClick.ReadValue<float>() >= 0.5)
         {
-            Debug.Log("Mouse Pressed!!!");
+            SetLasersActive(true);
+        }
+        else
+        {
+            SetLasersActive(false);
+        }
+    }
+
+    private void SetLasersActive(bool isActive)
+    {
+        foreach (GameObject laser in lasers)
+        {
+            var emissionModule = laser.GetComponent<ParticleSystem>().emission;
+            emissionModule.enabled = isActive;
         }
     }
 }
