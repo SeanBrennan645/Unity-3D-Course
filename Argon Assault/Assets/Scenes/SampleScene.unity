@@ -156,8 +156,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVfx: {fileID: 3200836327345539238, guid: 5af1ad4503c93324ca02cb339269d59a, type: 3}
+  hitVfx: {fileID: 3200836327345539238, guid: aa246832e28f97a48a8ece6b005d239e, type: 3}
   parent: {fileID: 375697987}
   scoreValue: 10
+  killValue: 50
+  hitPoints: 3
 --- !u!65 &3010002
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -267,8 +270,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVfx: {fileID: 3200836327345539238, guid: 5af1ad4503c93324ca02cb339269d59a, type: 3}
+  hitVfx: {fileID: 3200836327345539238, guid: aa246832e28f97a48a8ece6b005d239e, type: 3}
   parent: {fileID: 375697987}
   scoreValue: 10
+  killValue: 50
+  hitPoints: 3
 --- !u!65 &188682412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -597,8 +603,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVfx: {fileID: 3200836327345539238, guid: 5af1ad4503c93324ca02cb339269d59a, type: 3}
+  hitVfx: {fileID: 3200836327345539238, guid: aa246832e28f97a48a8ece6b005d239e, type: 3}
   parent: {fileID: 375697987}
   scoreValue: 10
+  killValue: 50
+  hitPoints: 3
 --- !u!108 &705507994 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 8717145369518557546, guid: 18ef0c18481abbc40978e34c9a4d80dc, type: 3}
@@ -813,8 +822,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVfx: {fileID: 3200836327345539238, guid: 5af1ad4503c93324ca02cb339269d59a, type: 3}
+  hitVfx: {fileID: 3200836327345539238, guid: aa246832e28f97a48a8ece6b005d239e, type: 3}
   parent: {fileID: 375697987}
   scoreValue: 10
+  killValue: 50
+  hitPoints: 3
 --- !u!65 &1550409245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1000,8 +1012,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVfx: {fileID: 3200836327345539238, guid: 5af1ad4503c93324ca02cb339269d59a, type: 3}
+  hitVfx: {fileID: 3200836327345539238, guid: aa246832e28f97a48a8ece6b005d239e, type: 3}
   parent: {fileID: 375697987}
   scoreValue: 10
+  killValue: 50
+  hitPoints: 3
 --- !u!1001 &3434572442819410919
 PrefabInstance:
   m_ObjectHideFlags: 0
