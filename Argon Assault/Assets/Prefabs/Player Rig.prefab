@@ -195,13 +195,60 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Movement
       m_Flags: 8
+  mouseClick:
+    m_Name: Mouse Click
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 8fd09265-cf0b-4491-8c7b-104bb82fcf5b
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 6e921afd-e91a-47e3-902b-1872d44fdb63
+      m_Path: <Mouse>/leftButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Mouse Click
+      m_Flags: 0
   controlSpeed: 30
-  xRange: 14
-  yRange: 5
+  xRange: 17
+  yRange: 9
+  lasers:
+  - {fileID: 3534492737739929092}
+  - {fileID: 4896793392746302867}
   positionPitchFactor: -2
   controlPitchFactor: -15
   positionYawFactor: 2
   controlRollFactor: -20
+--- !u!54 &2068707420
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8105466935375224358}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2068707419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8105466935375224358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de72c766e23fb24baf7558e87ef971d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3484528942273468874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -257,12 +304,21 @@ PrefabInstance:
       propertyPath: ShapeModule.m_Rotation.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4365609908568580739, guid: b3a8ce10040d61b40bc56510d84d8329, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8336003726105416793, guid: b3a8ce10040d61b40bc56510d84d8329, type: 3}
       propertyPath: m_Name
       value: RightLaser
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3a8ce10040d61b40bc56510d84d8329, type: 3}
+--- !u!1 &4896793392746302867 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8336003726105416793, guid: b3a8ce10040d61b40bc56510d84d8329, type: 3}
+  m_PrefabInstance: {fileID: 3484528942273468874}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4801511555910279773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -314,12 +370,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4365609908568580739, guid: b3a8ce10040d61b40bc56510d84d8329, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8336003726105416793, guid: b3a8ce10040d61b40bc56510d84d8329, type: 3}
       propertyPath: m_Name
       value: LeftLaser
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3a8ce10040d61b40bc56510d84d8329, type: 3}
+--- !u!1 &3534492737739929092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8336003726105416793, guid: b3a8ce10040d61b40bc56510d84d8329, type: 3}
+  m_PrefabInstance: {fileID: 4801511555910279773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8104809945671901450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -374,6 +439,30 @@ PrefabInstance:
     - target: {fileID: 4633660960354252, guid: 206dc24d514cdd146a07be8e731a56e9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65019122800980204, guid: 206dc24d514cdd146a07be8e731a56e9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65194381783259772, guid: 206dc24d514cdd146a07be8e731a56e9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65367435827181700, guid: 206dc24d514cdd146a07be8e731a56e9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65707246694860990, guid: 206dc24d514cdd146a07be8e731a56e9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65931128658656770, guid: 206dc24d514cdd146a07be8e731a56e9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65960757072800100, guid: 206dc24d514cdd146a07be8e731a56e9, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 206dc24d514cdd146a07be8e731a56e9, type: 3}
