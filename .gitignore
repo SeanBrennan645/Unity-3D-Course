@@ -5,6 +5,7 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 Argon Assault/Assets/Samples*
+RealmRush/Assets/Samples*
 
 # Visual Studio cache directory
 .vs/
