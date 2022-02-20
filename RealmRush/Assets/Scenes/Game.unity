@@ -17668,6 +17668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectPool
       objectReference: {fileID: 0}
+    - target: {fileID: 5210963578943200650, guid: 38a2af1245228544fac6fc31acd08599, type: 3}
+      propertyPath: poolSize
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5210963578943200651, guid: 38a2af1245228544fac6fc31acd08599, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
