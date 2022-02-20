@@ -8239,7 +8239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107beaaefd1e2d64997d4110f07033e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridSize: {x: 5, y: 5}
+  gridSize: {x: 10, y: 10}
 --- !u!4 &1053404566
 Transform:
   m_ObjectHideFlags: 0
@@ -17733,7 +17733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5210963578943200650, guid: 38a2af1245228544fac6fc31acd08599, type: 3}
       propertyPath: poolSize
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5210963578943200651, guid: 38a2af1245228544fac6fc31acd08599, type: 3}
       propertyPath: m_LocalPosition.x
