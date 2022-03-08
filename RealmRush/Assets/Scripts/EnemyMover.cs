@@ -22,15 +22,14 @@ public class EnemyMover : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable()
     {
-        FindPath();
+        RecalculatePath();
         ReturnToStart();
         StartCoroutine(FollowPath());
     }
 
-    void FindPath()
+    void RecalculatePath()
     {
         path.Clear();
-
         path = pathFinder.GetNewPath();
     }
 
