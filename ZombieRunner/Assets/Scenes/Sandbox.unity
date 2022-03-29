@@ -2247,6 +2247,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 95006617}
+    - target: {fileID: 6131003046623478387, guid: 51eadeedb9909534f941543ee0cc8601, type: 3}
+      propertyPath: chaseRange
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6131003046623478388, guid: 51eadeedb9909534f941543ee0cc8601, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6131003046623478392, guid: 51eadeedb9909534f941543ee0cc8601, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
