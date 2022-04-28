@@ -2727,6 +2727,10 @@ PrefabInstance:
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 8950360}
+    - target: {fileID: 5615213469950109903, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: ammoAmount
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5837044818840144110, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: muzzleFlash
       value: 
@@ -2735,6 +2739,10 @@ PrefabInstance:
       propertyPath: hitEffect
       value: 
       objectReference: {fileID: 100010, guid: 031d08f52af1daa4f929b85221519426, type: 3}
+    - target: {fileID: 6044551944784736643, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6057256898407454917, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_IsActive
       value: 0
