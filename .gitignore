@@ -4,12 +4,12 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Assets/TextMeshPro*
 Argon Assault/Assets/Samples*
 RealmRush/Assets/Samples*
 RealmRush/Assets/Prefabs/PrefabObjs*
 ZombieRunner/Assets/Samples*
 ZombieRunner/Assets/Standard Assets*
-
 # Visual Studio cache directory
 .vs/
 
