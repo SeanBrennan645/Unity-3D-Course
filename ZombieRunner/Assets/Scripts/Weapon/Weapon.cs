@@ -15,6 +15,11 @@ public class Weapon : MonoBehaviour
 
     bool canShoot = true;
 
+    private void OnEnable()
+    {
+        canShoot = true; //creates secondary infinite ammo bug but fine for now
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && canShoot)
