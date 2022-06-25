@@ -14,12 +14,6 @@ public class EnemyAttack : MonoBehaviour
 
     public void AttackHitEvent()
     {
-        if (target == null)
-        {
-            return;
-        }
-        Debug.Log("hitting the boi");
-
         if(target == null)
         {
             return;
@@ -27,6 +21,7 @@ public class EnemyAttack : MonoBehaviour
         else
         {
             target.TakeDamage(damage);
+            target.GetComponent<DisplayDamage>().ShowDamageCanvas();
         }
     }
 }
