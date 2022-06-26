@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2426231532615468596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.13, z: 0}
+  m_LocalPosition: {x: -0.6, y: 0.602, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2008342946554546415}
@@ -43,7 +43,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.28057137, g: 0.6856309, b: 0.9150943, a: 1}
-  m_Intensity: 1
+  m_Intensity: 4.41
   m_Range: 4
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -138,6 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8cdadf720647e4689271682650db0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restorAngle: 90
+  addIntensity: 1
 --- !u!135 &3702719777425813614
 SphereCollider:
   m_ObjectHideFlags: 0

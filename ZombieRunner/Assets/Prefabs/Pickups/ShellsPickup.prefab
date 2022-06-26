@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: ammoType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6825278335925615934, guid: 9d7283c6a42bfbb4b90f4c5e2e5cea9a, type: 3}
+      propertyPath: ammoAmount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7286169786817895974, guid: 9d7283c6a42bfbb4b90f4c5e2e5cea9a, type: 3}
       propertyPath: m_IsActive
       value: 0
